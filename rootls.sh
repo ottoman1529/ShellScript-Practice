@@ -1,7 +1,9 @@
 #!/bin/bash
 
-echo \
-"root directory"
+echo "root directory"
+
+#ルートディレクトリに移動する 
 cd /
-ls -l
+
+ls -l #ファイルサイズ、パーミッションなども合わせて表示する
 
