@@ -1,4 +1,4 @@
 #!/bin/bash
 
-appdir=/home/swat/workspace
-echo $appdir
+filename=residue.dat
+echo ${filename}_backup
