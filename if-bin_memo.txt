@@ -1,0 +1,15 @@
+# 文字列比較
+str1 = str2 #等しい
+str1 != str2 #等しくない
+-n str1 #から文字でない
+-z str1 #から文字である
+
+# 数値比較(整数)
+int1 -eq int2 #等しい(equal)
+int1 -ne int2 #等しくない(not equal)
+int1 -lt int2 #int1 < int2(less than)
+int1 -le int2 #int1 =< int2(less equal)
+int1 -gt int2 #int1 > int2(greater than)
+int1 -ge int2 #int1 => int2(greater equal)
+
+
