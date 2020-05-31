@@ -12,4 +12,21 @@ int1 -le int2 #int1 =< int2(less equal)
 int1 -gt int2 #int1 > int2(greater than)
 int1 -ge int2 #int1 => int2(greater equal)
 
+# ファイル属性の評価
+-e file #ファイルが存在する(exist)
+-d file #ファイルが存在し、ディレクトリである(directory)
+-h file #ファイルが存在し、シンボリックリンクである
+-L file #同上
+-f file #通常のファイルである(file)
+-r file #ファイルが存在し、読み取り許可がある(read)
+-w file #ファイルが存在し、書き込み許可がある(write)
+-x file #ファイルが存在し、実行許可がある(exexute)
+file1 -nt file2 #file1の変更時刻がfile2より新しい(newer than)
+file2 -ot file2 #file1の変更時刻がfile2より古い(older than)
+
+#演算子の結合
+条件式1 -a 条件式2 #(and)
+条件式1 -o 条件式2 #(or)
+!条件式 #否定
+() #条件式のグループ化
 
