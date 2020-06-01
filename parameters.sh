@@ -10,3 +10,8 @@ echo "\$5 = $5"
 
 # 引数の個数
 echo "\$# = $#"
+
+for parameter in "$@"
+do
+	echo "$parameter"
+done
