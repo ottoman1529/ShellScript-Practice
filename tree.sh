@@ -11,6 +11,9 @@ list_recursive ()
 	echo "${indent}${filepath##*/}"
 
 	if [ -d "$filepath" ]; then
+		# IFSをバックアップ/変更
+		_IFS=$IFS
+		IFS=$'\n'
 		# ディレクトリである場合、その中に含まれるファイルや
 		# ディレクトリを一覧表示する
 		local fname
@@ -19,6 +22,7 @@ list_recursive ()
 			#インデントにスペースを追加して再帰呼び出し
 			list_recursive "${filepath}/${fname}" "    $indent"
 		done
+		IFS=$_IFS
 	fi
 }
 
