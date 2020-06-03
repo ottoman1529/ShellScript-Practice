@@ -10,6 +10,12 @@ list_recursive ()
 	if [ -d "$filepath" ]; then
 		# ディレクトリである場合、その中に含まれるファイルや
 		# ディレクトリを一覧表示する
+		local fname
+		for fname in $(ls "$filepath")
+		do
+			#ディレクトリ内のファイルを表示
+			list_recursive "${filepath}/${fname}"
+		done
 	fi
 }
 
