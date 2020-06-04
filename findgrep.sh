@@ -41,5 +41,11 @@ if [ -z "$name" ]; then
 	name='*'
 fi
 
+# 検索ディレクトリが存在しない場合はエラーメッセージを表示して終了
+if [ ! -d "$directory" ]; then
+	echo "$0: ${directory}: No such directory" 1>&2
+	exit 2
+fi
+
 find . -type f -name "$name" | xargs grep -nH "$pattern"
 
